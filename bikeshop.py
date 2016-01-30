@@ -23,7 +23,7 @@ class Customer(object):
         self.name = name
         self.budget = budget
         
-    def buy(self):
+    def buy(self): #not sure how to set this up
         #buy bicycle
         pass
        
@@ -45,18 +45,21 @@ bike_prices = {
 
 #Store
 
+inventory = [Huff, BMX, Trak]
+print(inventory)
+
+# this adds 20% mark up to costs
 store_costs = {
-    "Huff": (Huff.cost + (Huff.cost*.20)),
+    "Huff": (Huff.cost + (Huff.cost*.20)), 
     "BMX": (BMX.cost + BMX.cost + (BMX.cost*20)),
     "Trak":(Trak.cost + (Trak.cost *.20)),
     }
 
 
 
-bike_shop = Shop("Biffs Bikes", store_costs)
+bike_shop = Shop("Biffs Bikes", inventory)
 
 
-print(Huff.weight, Huff.cost)
 
 
 #customers
@@ -78,7 +81,7 @@ print(bike_prices)
 print(budgets)
 print(budgets["Tom"] - bike_prices["Huff"])
 
-def buy_bike(x, y):
+def buy_bike(x, y): #should this go in customer class?
     if budgets[x] >= bike_prices[y]:
         return budgets[x] - bike_prices[y]
     else:
