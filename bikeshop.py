@@ -8,15 +8,22 @@ class Shop(object):
     def __init__(self,name, inventory):
         self.name = name
         self.inventory = inventory
+        self.revenue = 0
+    
         
-    def sell(self):
+    def sell(x):
         #sell bike at 20% margin
-        pass
+        revenue = self.revenue + [x + (x *.20)]
+        return revenue
+        
+        
+        
     
     def profit(self):
         #displays profit for bike sold
-        #print(sold)
-        pass
+        profit = revenue - x
+        return profit
+       
     
 class Customer(object):
     def __init__(self, name, budget):
